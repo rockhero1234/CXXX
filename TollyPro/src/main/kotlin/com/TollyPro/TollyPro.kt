@@ -17,13 +17,12 @@ import java.time.Year
 
 class TollyPro : MainAPI() {
 
-    override var mainUrl = "https://tellyhd.buzz"
+    override var mainUrl = "https://tellyhd.app"
     override var name = "TellyHD"
     override val hasMainPage= true
     override var lang= "hi"
     override val supportedTypes= setOf(TvType.NSFW)
     override val vpnStatus= VPNStatus.MightBeNeeded
-    val directUrl =""
     @SuppressLint("NewApi")
     override val mainPage = mainPageOf(
         "release/${Year.now().value}" to "Latest",
@@ -154,7 +153,7 @@ class TollyPro : MainAPI() {
            //     )).parsed<ResponseHash>().embed_url.getIframe()
             if (!data.contains("youtube")) loadExtractor(
                 data,
-                "$directUrl/",
+                "$mainUrl/",
                 subtitleCallback,
                 callback
             )
