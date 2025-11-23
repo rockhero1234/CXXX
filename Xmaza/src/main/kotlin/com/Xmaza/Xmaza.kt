@@ -17,13 +17,7 @@ class Xmaza : MainAPI() {
 
     override val mainPage = mainPageOf(
         "" to "Home",
-        "ullu-c14" to "Ullu",
-        "triflicks" to "Triflicks",
-        "primeplay-c1" to "PrimePlay",
-        "kooku" to "Kooku",
-        "atragii-c8" to "Atragii",
-        "rabbit" to "Rabbit",
-        "hunters" to "Hunters"
+        "category/ullu-hot-web-series" to "Ullu"
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
